@@ -21,7 +21,7 @@ function createSensor(name, temp, hum, lastread)
 function sendData(sensor)
 {
 	var allData = {
-		IKEY: "3d87ce8e607255e644d69879974b559aff2345b8",
+		IKEY: "[YOUR_IKEY]",
 		Data: JSON.stringify(sensor)
 	};
 	
@@ -29,7 +29,7 @@ function sendData(sensor)
 
 	var args = {
 		data: JSON.stringify(allData),
-		headers: { "x-api-key": "d9fdf4a6406af75691a7fe43f0d8a57dc8f57273" }
+		headers: { "x-api-key": "[YOUR_APIKEY]" }
 	};
 
 	client.post("https://listen.a2g.io/v1/testing/inputstream", args, 
